@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | Alberto Watches</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/collection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/components/header.css">
+<script src="js/components/header.js" defer></script>
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="main-header">
+        <!-- ... navigation content ... -->
+    </header>
+
+    <main class="collection-page">
+        <div class="collection-hero">
+            <h1>Our Collections</h1>
+            <p>Discover the perfect timepiece</p>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn">Filter <i class="fas fa-filter"></i></button>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <h3>Collection</h3>
+                    <label><input type="checkbox" value="chronograph"> Chronograph</label>
+                    <label><input type="checkbox" value="classic"> Classic</label>
+                    <label><input type="checkbox" value="sport"> Sport</label>
+                </div>
+                <div class="filter-group">
+                    <h3>Material</h3>
+                    <label><input type="checkbox" value="gold"> Gold</label>
+                    <label><input type="checkbox" value="steel"> Steel</label>
+                    <label><input type="checkbox" value="platinum"> Platinum</label>
+                </div>
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <input type="range" min="0" max="100000" step="1000" class="price-range">
+                    <div class="price-values">
+                        <span>$0</span>
+                        <span>$100,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="watches-grid">
+            <!-- Watch Items -->
+            <div class="watch-item" data-aos="fade-up">
+                <img src="images/watches/chronograph-1.jpg" alt="Chronograph Watch">
+                <div class="watch-details">
+                    <h3>Alberto Chronograph</h3>
+                    <p>Reference: CHR-001</p>
+                    <p class="price">$25,000</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add more watch items -->
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <!-- ... footer content ... -->
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                });
+        });
+    </script>
+</body>
+</html> 

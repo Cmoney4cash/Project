@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Favorites | Alberto Watches</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/favorites.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/components/header.css">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="main-header">
+        <!-- ... navigation content ... -->
+    </header>
+    <section class="favorites-section">
+        <h2>Your Favorites</h2>
+        <div class="favorites-grid">
+            <!-- Favorite watches will be dynamically loaded here -->
+        </div>
+        <h3>Suggested Watches</h3>
+        <div class="suggestions-grid">
+            <!-- Suggested watches -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                });
+
+            loadFavorites();
+        });
+
+        function loadFavorites() {
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            const favoritesGrid = document.querySelector('.favorites-grid');
+            favoritesGrid.innerHTML = favorites.map(watchId => `
+                <div class="favorite-item">
+                    <img src="images/watches/${watchId}.jpg" alt="${watchId}">
+                    <h3>${watchId.replace('-', ' ')}</h3>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html> 

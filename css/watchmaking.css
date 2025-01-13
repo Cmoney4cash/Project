@@ -1,0 +1,126 @@
+.watchmaking-page {
+    padding-top: 80px;
+}
+
+.craft-hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.craft-hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    background: rgba(0,0,0,0.4);
+}
+
+.craft-process {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.process-timeline {
+    max-width: 1200px;
+    margin: 3rem auto;
+    position: relative;
+}
+
+.process-step {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.process-step img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.materials {
+    padding: 4rem 5%;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+.material-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.material-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.workshop-tour {
+    padding: 4rem 5%;
+}
+
+.tour-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tour-btn {
+    padding: 1rem 2rem;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.tour-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .tour-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+} 

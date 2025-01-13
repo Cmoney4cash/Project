@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Alberto Watches</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/components/header.css">
+<script src="js/components/header.js" defer></script>
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="main-header">
+        <!-- ... navigation content ... -->
+    </header>
+
+    <main class="about-page">
+        <section class="about-hero">
+            <h1>Our Heritage</h1>
+            <p>A Legacy of Excellence Since 1908</p>
+        </section>
+
+        <section class="history-section">
+            <div class="history-content">
+                <div class="history-text" data-aos="fade-right">
+                    <h2>The Alberto Story</h2>
+                    <p>Founded in 1908 by master watchmaker Antonio Alberto in the heart of Switzerland, Alberto Watches has maintained an unwavering commitment to excellence and innovation in watchmaking for over a century.</p>
+                    <p>Each timepiece represents the perfect harmony between traditional craftsmanship and cutting-edge technology, creating watches that are both timeless and contemporary.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-item" data-aos="fade-up">
+                    <i class="fas fa-gem"></i>
+                    <h3>Excellence</h3>
+                    <p>Uncompromising quality in every detail</p>
+                </div>
+                <div class="value-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-history"></i>
+                    <h3>Heritage</h3>
+                    <p>Preserving traditional craftsmanship</p>
+                </div>
+                <div class="value-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Pushing the boundaries of watchmaking</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Our Master Craftsmen</h2>
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up">
+                    <img src="img.vid/Our Master Craftsman.jpeg" alt="Master Craftsman">
+                    <h3>Marco Alberto</h3>
+                    <p>Master Watchmaker</p>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@alberto-watches.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Alberto Watches. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                });
+        });
+    </script>
+</body>
+</html> 

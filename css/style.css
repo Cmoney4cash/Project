@@ -1,0 +1,293 @@
+/* Global Styles */
+:root {
+    --primary-color: #0A1F44;    /* Deep Navy Blue */
+    --secondary-color: #1A365D;  /* Medium Navy Blue */
+    --accent-color: #2A4A7F;     /* Light Navy Blue */
+    --text-color: #FFFFFF;       /* White */
+    --dark-text: #000000;        /* Black */
+    --background-light: #F5F7FA; /* Light Background */
+    --background-dark: #0A1F44;  /* Dark Background (Navy) */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+/* Header Styles */
+.main-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 31, 68, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 2px;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* Featured Collections */
+.featured-collections {
+    padding: 5rem 5%;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.collection-item {
+    position: relative;
+    overflow: hidden;
+    background: var(--text-color);
+    color: var(--dark-text);
+}
+
+.collection-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.collection-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--background-dark);
+    padding: 4rem 5% 2rem;
+    color: var(--text-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    padding: 0.5rem;
+    border: 1px solid var(--accent-color);
+    background: transparent;
+    color: var(--text-color);
+}
+
+.newsletter-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Card and section backgrounds */
+.collection-item, .service-card, .product-card {
+    background: var(--text-color);
+    color: var(--dark-text);
+}
+
+/* Accent elements */
+.accent-bg {
+    background-color: var(--accent-color);
+}
+
+/* Text colors */
+.dark-text {
+    color: var(--dark-text);
+}
+
+.light-text {
+    color: var(--text-color);
+}
+
+/* Button variations */
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.outline-btn {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+/* Section backgrounds */
+.light-section {
+    background-color: var(--background-light);
+    color: var(--dark-text);
+}
+
+.dark-section {
+    background-color: var(--background-dark);
+    color: var(--text-color);
+}
+
+/* Form elements */
+input, textarea, select {
+    border: 1px solid var(--accent-color);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Navigation hover effects */
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Card hover effects */
+.hover-effect:hover {
+    box-shadow: 0 5px 15px rgba(10, 31, 68, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Price and important text */
+.price, .highlight {
+    color: var(--primary-color);
+}
+
+/* Dividers */
+.divider {
+    background-color: var(--accent-color);
+}
+
+/* Icons */
+.icon {
+    color: var(--primary-color);
+}
+
+/* Alerts and notifications */
+.alert-success {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.alert-error {
+    background-color: #FF3B30;
+    color: var(--text-color);
+} 

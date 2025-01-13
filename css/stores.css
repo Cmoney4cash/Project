@@ -1,0 +1,143 @@
+.stores-page {
+    padding-top: 80px;
+}
+
+.stores-hero {
+    height: 40vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/stores/boutique.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.store-finder {
+    padding: 4rem 5%;
+}
+
+.finder-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 600px;
+}
+
+.search-panel {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.search-box {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    gap: 1rem;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-box button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.store-list {
+    height: calc(100% - 70px);
+    overflow-y: auto;
+}
+
+.store-item {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.store-item:hover {
+    background: #f5f5f5;
+}
+
+.store-item h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.store-item p {
+    margin: 0.3rem 0;
+    color: #666;
+}
+
+.store-item i {
+    width: 20px;
+    color: var(--secondary-color);
+}
+
+.direction-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.boutique-services {
+    padding: 4rem 5%;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+}
+
+.service-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.service-item i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 968px) {
+    .finder-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-container {
+        height: 400px;
+    }
+} 

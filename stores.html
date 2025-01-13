@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Locator | Alberto Watches</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stores.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/components/header.css">
+<script src="js/components/header.js" defer></script>
+    <!-- Add Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="main-header">
+        <!-- ... navigation content ... -->
+    </header>
+
+    <main class="stores-page">
+        <section class="stores-hero">
+            <h1>Find a Boutique</h1>
+            <p>Visit us to experience the world of Alberto</p>
+        </section>
+
+        <section class="store-finder">
+            <div class="finder-container">
+                <div class="search-panel">
+                    <div class="search-box">
+                        <input type="text" id="location-search" placeholder="Enter your location">
+                        <button onclick="searchLocations()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="store-list">
+                        <div class="store-item" onclick="selectStore(1)">
+                            <h3>Alberto New York</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Fifth Avenue, NY 10001</p>
+                            <p><i class="fas fa-phone"></i> +1 (212) 555-0123</p>
+                            <p><i class="fas fa-clock"></i> Mon-Sat: 10:00 - 19:00</p>
+                            <button class="direction-btn">Get Directions</button>
+                        </div>
+                        <!-- More store items will be dynamically added -->
+                    </div>
+                </div>
+                
+                <div id="map" class="map-container">
+                    <!-- Google Maps will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="boutique-services">
+            <h2>Boutique Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-gem"></i>
+                    <h3>Expert Consultation</h3>
+                    <p>Personal guidance from our watch specialists</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Service Center</h3>
+                    <p>On-site maintenance and repairs</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-glass-cheers"></i>
+                    <h3>VIP Lounge</h3>
+                    <p>Private viewing experience</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <!-- ... footer content ... -->
+    </footer>
+
+    <script src="js/stores.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                });
+        });
+    </script>
+</body>
+</html> 

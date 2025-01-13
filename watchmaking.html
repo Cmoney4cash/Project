@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchmaking | Alberto Watches</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/watchmaking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/components/header.css">
+<script src="js/components/header.js" defer></script>
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="main-header">
+        <!-- ... navigation content ... -->
+    </header>
+
+    <main class="watchmaking-page">
+        <section class="craft-hero">
+            <video autoplay muted loop>
+                <source src="img.vid/watchmaking.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1>The Art of Watchmaking</h1>
+                <p>Where tradition meets innovation</p>
+            </div>
+        </section>
+
+        <section class="craft-process">
+            <h2>Our Craftsmanship Journey</h2>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up">
+                    <div class="step-number">01</div>
+                    <h3>Design</h3>
+                    <p>Each timepiece begins as a detailed sketch, combining aesthetic beauty with mechanical precision.</p>
+                    <img src="images/watchmaking/design.jpg" alt="Watch Design Process">
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">02</div>
+                    <h3>Component Creation</h3>
+                    <p>Premium materials are carefully selected and crafted into precise components.</p>
+                    <img src="images/watchmaking/components.jpg" alt="Watch Components">
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">03</div>
+                    <h3>Assembly</h3>
+                    <p>Master watchmakers meticulously assemble each movement by hand.</p>
+                    <img src="images/watchmaking/assembly.jpg" alt="Watch Assembly">
+                </div>
+
+                <div class="process-step" data-aos="fade-up" data-aos-delay="600">
+                    <div class="step-number">04</div>
+                    <h3>Quality Control</h3>
+                    <p>Rigorous testing ensures perfect functionality and reliability.</p>
+                    <img src="images/watchmaking/quality.jpg" alt="Quality Control">
+                </div>
+            </div>
+        </section>
+
+        <section class="materials">
+            <h2>Premium Materials</h2>
+            <div class="materials-grid">
+                <div class="material-card" data-aos="fade-up">
+                    <img src="images/watchmaking/gold.jpg" alt="18k Gold">
+                    <h3>18k Gold</h3>
+                    <p>Sourced from exclusive refineries</p>
+                </div>
+                <!-- Add more material cards -->
+            </div>
+        </section>
+
+        <section class="workshop-tour">
+            <div class="tour-content">
+                <div class="tour-text">
+                    <h2>Visit Our Workshop</h2>
+                    <p>Experience the art of watchmaking firsthand with a guided tour of our facilities.</p>
+                    <button class="tour-btn">Book a Tour</button>
+                </div>
+                <div class="tour-image">
+                    <img src="images/watchmaking/workshop.jpg" alt="Workshop">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <!-- ... footer content ... -->
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                });
+        });
+    </script>
+</body>
+</html> 

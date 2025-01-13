@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Watches | Luxury Timepieces</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/index.css">
+<script src="js/components/header.js" defer></script>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">ALBERTO</a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="collection.html">Watches</a></li>
+                    <li><a href="new-2024.html">New 2024</a></li>
+                    <li><a href="watchmaking.html">Watchmaking</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Care & Service</a></li>
+                    <li><a href="stores.html">Store Locator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <video autoplay muted loop>
+                <source src="img.vid/Cinematic Watch Product Video Commercial Example .mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Alberto Watches</h1>
+            <p>Timeless Elegance, Unparalleled Craftsmanship</p>
+            <a href="collection.html" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Featured 2024 Collection Section -->
+    <section class="featured-collection">
+        <div class="collection-bg">
+            <img src="img.vid/Collection background.jpeg" alt="Luxury Watch Collection" class="collection-image">
+            <div class="collection-overlay"></div>
+        </div>
+        <div class="collection-content">
+            <h2>2024 Collection</h2>
+            <div class="collection-grid">
+                <div class="collection-item">
+                    <img src="img.vid/Watch 1.jpg" alt="Luxury Watch 1">
+                    <div class="item-details">
+                        <h3>Celestial Chronograph</h3>
+                        <p>Limited Edition</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="img.vid/Watch 5.png" alt="Luxury Watch 2">
+                    <div class="item-details">
+                        <h3>Ocean Navigator</h3>
+                        <p>Professional Series</p>
+                    </div>
+                </div>
+                <div class="collection-item">
+                    <img src="img.vid/Watch 3.png" alt="Luxury Watch 3">
+                    <div class="item-details">
+                        <h3>Classic Elite</h3>
+                        <p>Signature Series</p>
+                    </div>
+                </div>
+            </div>
+            <a href="collection.html" class="collection-btn">View Full Collection</a>
+        </div>
+    </section>
+
+    <!-- Craftsmanship Section -->
+    <section class="craftsmanship">
+        <div class="craft-bg">
+            <video autoplay muted loop class="craft-video">
+                <source src="img.vid/Craftmanship.mp4" type="video/mp4">
+            </video>
+            <div class="craft-overlay"></div>
+        </div>
+        <div class="craft-content">
+            <h2>Master Craftsmanship</h2>
+            <p>Each timepiece is meticulously crafted by our master watchmakers, combining centuries of tradition with modern innovation.</p>
+            <a href="watchmaking.html" class="craft-btn">Discover Our Process</a>
+        </div>
+    </section>
+
+    <!-- Heritage Section -->
+    <section class="heritage">
+        <div class="heritage-bg">
+            <img src="img.vid/Our heritage.jpeg" alt="Alberto Heritage" class="heritage-image">
+            <div class="heritage-overlay"></div>
+        </div>
+        <div class="heritage-content">
+            <h2>Our Heritage</h2>
+            <p>A legacy of excellence since 1908. Every Alberto timepiece tells a story of precision, passion, and unparalleled craftsmanship passed down through generations.</p>
+            <a href="about.html" class="heritage-btn">Discover Our Story</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@alberto-watches.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Alberto Watches. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Parallax effect for background images
+        window.addEventListener('scroll', () => {
+            const parallaxBgs = document.querySelectorAll('.parallax-bg');
+            parallaxBgs.forEach(bg => {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * 0.5;
+                bg.style.transform = `translateY(${rate}px)`;
+            });
+        });
+    </script>
+    
+</body>
+</html>

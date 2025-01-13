@@ -1,0 +1,467 @@
+:root {
+    --primary-color: #0A1F44;
+    --secondary-color: #1A365D;
+}
+
+/* Reset any previous background colors */
+body {
+    background-color: #FFFFFF;
+}
+
+/* Hero section specific background */
+.hero {
+    background-color: transparent;
+    margin-bottom: 40px; /* Add space after hero */
+}
+
+/* Essential styles for video background */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-video-container video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 31, 68, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #0A1F44;
+    border: 2px solid #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FFFFFF;
+    color: #0A1F44;
+}
+
+/* Section Backgrounds */
+.section-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    width: 100%;
+    height: 120%; /* Extra height for parallax effect */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Featured Collection */
+.featured-collection {
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 0;
+    background: #FFFFFF;
+    margin-top: 40px;
+}
+
+.collection-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh; /* Background image takes up top 40% of section */
+    overflow: hidden;
+}
+
+.collection-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collection-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 31, 68, 0.7),
+        rgba(10, 31, 68, 0.9)
+    );
+}
+
+.collection-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.collection-content h2 {
+    color: #FFFFFF;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.collection-item {
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.collection-item:hover {
+    transform: translateY(-5px);
+}
+
+.collection-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.item-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.item-details h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.item-details p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+
+.collection-btn {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    padding: 1rem 2.5rem;
+    background: var(--primary-color);
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.collection-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Craftsmanship Section Styles */
+.craftsmanship {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.craft-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.craft-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.craft-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(10, 31, 68, 0.8) 0%,
+        rgba(10, 31, 68, 0.6) 100%
+    );
+}
+
+.craft-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    max-width: 600px;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.craft-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.craft-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.craft-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.craft-btn:hover {
+    background: #FFFFFF;
+    color: #0A1F44;
+}
+
+/* Heritage Section Styles - Completely Separate */
+.heritage {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.heritage-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.heritage-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heritage-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to left,
+        rgba(10, 31, 68, 0.8) 0%,
+        rgba(10, 31, 68, 0.6) 100%
+    );
+}
+
+.heritage-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    max-width: 600px;
+    margin-right: 10%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    padding: 0 20px;
+}
+
+.heritage-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.heritage-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.heritage-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.heritage-btn:hover {
+    background: #FFFFFF;
+    color: #0A1F44;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Both Sections */
+@media (max-width: 768px) {
+    /* Craftsmanship Mobile Styles */
+    .craft-content {
+        margin: 0 5%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .craft-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .craft-content p {
+        font-size: 1rem;
+    }
+
+    /* Heritage Mobile Styles */
+    .heritage-content {
+        margin: 0 5%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .heritage-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .heritage-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Common Section Styles */
+.section-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+.hero + * {
+    background-color: #FFFFFF;
+}
+
+/* Ensure no background color inheritance */
+.hero + .featured-collection {
+    background-color: #FFFFFF;
+} 

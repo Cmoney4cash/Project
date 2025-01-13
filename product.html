@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name | Alberto Watches</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/components/header.css">
+<script src="js/components/header.js" defer></script>
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="main-header">
+        <!-- ... navigation content ... -->
+    </header>
+
+    <main class="product-page">
+        <div class="product-container">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="images/products/watch-main.jpg" alt="Watch" id="main-image">
+                </div>
+                <div class="thumbnail-grid">
+                    <img src="images/products/watch-1.jpg" alt="Watch View 1" onclick="changeImage(this.src)">
+                    <img src="images/products/watch-2.jpg" alt="Watch View 2" onclick="changeImage(this.src)">
+                    <img src="images/products/watch-3.jpg" alt="Watch View 3" onclick="changeImage(this.src)">
+                    <img src="images/products/watch-4.jpg" alt="Watch View 4" onclick="changeImage(this.src)">
+                </div>
+            </div>
+
+            <div class="product-details">
+                <h1>Celestial Chronograph</h1>
+                <p class="reference">Reference: CHR-2024-001</p>
+                <p class="price">$25,000</p>
+                
+                <div class="specifications">
+                    <h2>Specifications</h2>
+                    <ul>
+                        <li><span>Case:</span> 42mm Platinum</li>
+                        <li><span>Movement:</span> Automatic</li>
+                        <li><span>Power Reserve:</span> 72 hours</li>
+                        <li><span>Water Resistance:</span> 100m</li>
+                    </ul>
+                </div>
+
+                <div class="product-actions">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="schedule-viewing">Schedule Viewing</button>
+                </div>
+
+                <div class="additional-info">
+                    <div class="info-tab">
+                        <h3>Description</h3>
+                        <div class="tab-content">
+                            <p>Detailed product description...</p>
+                        </div>
+                    </div>
+                    <div class="info-tab">
+                        <h3>Features</h3>
+                        <div class="tab-content">
+                            <ul>
+                                <li>Perpetual calendar</li>
+                                <li>Moon phase indicator</li>
+                                <li>Chronograph function</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-products">
+            <h2>You May Also Like</h2>
+            <div class="related-grid">
+                <!-- Related products will be dynamically loaded -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <!-- ... footer content ... -->
+    </footer>
+
+    <script src="js/product.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                });
+        });
+    </script>
+</body>
+</html> 
