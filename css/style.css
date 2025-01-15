@@ -266,11 +266,6 @@ input:focus, textarea:focus, select:focus {
     transform: translateY(-3px);
 }
 
-/* Price and important text */
-.price, .highlight {
-    color: var(--primary-color);
-}
-
 /* Dividers */
 .divider {
     background-color: var(--accent-color);
@@ -290,4 +285,11 @@ input:focus, textarea:focus, select:focus {
 .alert-error {
     background-color: #FF3B30;
     color: var(--text-color);
+}
+
+/* Remove any price-related CSS classes */
+.price,
+.price-tag,
+.item-price {
+    display: none;
 } 

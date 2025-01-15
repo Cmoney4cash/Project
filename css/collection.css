@@ -41,18 +41,21 @@
     gap: 0.5rem;
 }
 
-.watches-grid {
+.watches-grid, .favorites-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 2rem 5%;
 }
 
 .watch-item {
-    background: rgb(99, 76, 76);
+    position: relative;
+    background: #FFFFFF;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -62,13 +65,26 @@
 
 .watch-item img {
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
 }
 
 .watch-details {
     padding: 1.5rem;
     text-align: center;
+}
+
+.watch-details h3 {
+    font-size: 1.5rem;
+    color: #0A1F44;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.watch-details p {
+    color: #4A5568;
+    margin-bottom: 1rem;
 }
 
 .add-to-cart {
@@ -87,21 +103,231 @@
 
 .favorite-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1rem;
+    right: 1rem;
     background: transparent;
     border: none;
     cursor: pointer;
-    color: #FFFFFF;
+    z-index: 2;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.favorite-btn i {
     font-size: 1.5rem;
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease;
 }
 
 .favorite-btn.active {
-    color: #FF0000; /* Red color for active favorite */
+    background-color: #1A365D;
+}
+
+.favorite-btn.active i {
+    color: #FFFFFF;
+    text-shadow: none;
 }
 
 .collection-item {
     position: relative;
     /* Other styles */
-} 
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .watches-grid, .favorites-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .watches-grid, .favorites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .watches-grid, .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .favorites-section h1 {
+        font-size: 2rem;
+    }
+
+    .watch-item img {
+        height: 350px;
+    }
+}
+
+/* Notification Styles */
+.favorite-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1A365D;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.favorite-notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.favorite-notification.success {
+    background-color: #1A365D;
+}
+
+.favorite-notification.info {
+    background-color: #4A5568;
+}
+
+/* Favorite Button Animation */
+.favorite-animation {
+    animation: heartPulse 0.3s ease;
+}
+
+@keyframes heartPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Lazy Loading Styles */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
+
+/* Empty Favorites State */
+.no-favorites {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.no-favorites i.fa-heart-broken {
+    font-size: 4rem;
+    color: #1A365D;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.no-favorites h2 {
+    font-size: 2rem;
+    color: #0A1F44;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.no-favorites p {
+    font-size: 1.2rem;
+    color: #4A5568;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.browse-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: #1A365D;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.browse-link:hover {
+    background-color: #2A4A7F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 54, 93, 0.2);
+}
+
+.browse-link i {
+    font-size: 1.1rem;
+}
+
+.main-footer {
+    background-color: var(--background-dark);
+    padding: 4rem 5% 2rem;
+    color: var(--text-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    padding: 0.5rem;
+    border: 1px solid var(--accent-color);
+    background: transparent;
+    color: var(--text-color);
+}
+
+.newsletter-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Favorites Section Styles */
+.favorites-section {
+    padding-top: 80px;
+}
+
+.favorites-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0A1F44;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Alberto Watches</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/components/header.js" defer></script>
+</head>
+<body>
+    <section class="products-hero">
+        <img src="img.vid/Collection background.jpeg" alt="Products Hero Background">
+        <div class="hero-content">
+            <h1>Our Products</h1>
+            <p>Discover the art of luxury timepieces</p>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="products-grid">
+            <!-- Product Categories -->
+            <div class="product-category">
+                <img src="img.vid/Chronograph watch 10.png" alt="Luxury Watches">
+                <div class="category-content">
+                    <h2>Luxury Watches</h2>
+                    <p>Explore our collection of premium timepieces</p>
+                    <a href="collection.html" class="category-link">View Collection</a>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <img src="img.vid/accessories.webp" alt="Watch Accessories">
+                <div class="category-content">
+                    <h2>Accessories</h2>
+                    <p>Premium watch accessories and care products</p>
+                    <a href="service.html" class="category-link">View Accessories</a>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <img src="img.vid/Chronograph watch 11.png" alt="Limited Editions">
+                <div class="category-content">
+                    <h2>Limited Editions</h2>
+                    <p>Exclusive and limited release timepieces</p>
+                    <a href="collection.html" class="category-link">View Limited Editions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin', data);
+                });
+        });
+    </script>
+</body>
+</html> 

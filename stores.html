@@ -42,12 +42,11 @@
                             <p><i class="fas fa-clock"></i> Mon-Sat: 10:00 - 19:00</p>
                             <button class="direction-btn">Get Directions</button>
                         </div>
-                        <!-- More store items will be dynamically added -->
                     </div>
                 </div>
                 
                 <div id="map" class="map-container">
-                    <!-- Google Maps will be loaded here -->
+                    <img src="img.vid/map.png" alt="Map">
                 </div>
             </div>
         </section>
@@ -76,10 +75,34 @@
 
     <!-- Footer (same as index.html) -->
     <footer class="main-footer">
-        <!-- ... footer content ... -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@alberto-watches.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Alberto Watches. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="js/stores.js"></script>
+ 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             fetch('components/header.html')

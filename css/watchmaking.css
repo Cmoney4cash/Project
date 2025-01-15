@@ -59,6 +59,7 @@
 .process-step img {
     width: 100%;
     border-radius: 8px;
+    color: black;
     margin-top: 1rem;
 }
 
@@ -124,3 +125,19 @@
         gap: 2rem;
     }
 } 
+h3{
+    color: black;
+}
+p{
+    color: black;
+}
+
+.workshop-tour .tour-content .tour-text p {
+    color: white;
+}
+.hero-content p {
+    color: white;
+}
+footer p{
+    color: white;
+}
